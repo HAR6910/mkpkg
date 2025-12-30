@@ -3,7 +3,17 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import rclpy
-from mypkg.bowlingscore_node import BowlingScoreNode
+from mypkg.talker import main as talker_main
+from mypkg.listener import main as listener_main
+
+def test_imports():
+    assert talker_main is not None
+    assert listener_main is not None
+
+def test_rclpy_init():
+    rclpy.init()
+    assert rclpy.ok()
+    rclpy.shutdown()
 
 def setup_module(module):
     if not rclpy.ok():
