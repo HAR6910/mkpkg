@@ -31,5 +31,5 @@ jobs:
         cd ~/ros2_ws
         colcon build
         source install/setup.bash
-      python3 src/mypkg/test/test_bowling.py 
+        python3 src/mypkg/test/test_bowling.py 
 
